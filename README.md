@@ -15,7 +15,7 @@ Maven plugin to prepare packaged xwiki repositories for off-line installations
 
 ## Usage
 
-To use this plugin to prepare a off-line repository for a new installation setup without Internet access, you need to
+To use this plugin to prepare an off-line repository for a new installation setup without Internet access, you need to
 create a new maven project with this simple pom:
     
     <?xml version="1.0" encoding="UTF-8"?>
@@ -95,14 +95,15 @@ create a new maven project with this simple pom:
             <artifactId>offline-xwiki-repository-packager-maven-plugin</artifactId>
             <version>1.0-SNAPSHOT</version>
             <configuration>
-              <!-- Exclude JARs that have legacy versions in the WAR -->
               <excludes>
+                <!-- Exclude JARs that have legacy versions in the WAR -->
                 <exclude>org.xwiki.commons:xwiki-commons-component-api</exclude>
                 <exclude>org.xwiki.commons:xwiki-commons-component-default</exclude>
                 <exclude>org.xwiki.rendering:xwiki-rendering-api</exclude>
                 <exclude>org.xwiki.platform:xwiki-platform-office-importer</exclude>
                 <exclude>org.xwiki.platform:xwiki-platform-oldcore</exclude>
                 <exclude>org.xwiki.platform:xwiki-platform-rendering-macro-include</exclude>
+                <!-- A special case, to the improved Blog Application between 8.4.2 and 9.2 -->
                 <exclude>org.xwiki.platform:xwiki-platform-blog-ui</exclude>
               </excludes>
             </configuration>
@@ -115,7 +116,7 @@ create a new maven project with this simple pom:
               </execution>
             </executions>
           </plugin>
-          <!-- To assemble the repository in a ZIP file for easy transfert -->
+          <!-- To assemble the repository in a ZIP file for easy transfer -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
@@ -155,4 +156,8 @@ And an assembly definition into src/assemble/offline-repository.xml with the fol
     </assembly>
 
 You can build your project with `mvn package`, and you will get your repository packaged in the `target` folder, under
-the `data` folder, and a ready to transfert zip file in `my.artifact.id-version.zip`.
+the `data` folder, and a ready to transfer zip file in `my.artifact.id-version.zip`.
+
+To use that repository, in a fresh installation of XWiki (no database, nor existing extensions installed yet), unzip the
+resulting package in the permanent directory. Be careful to give appropriate rights to allow the servlet container to
+write over the extracted files.
