@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>offline-xwiki-repository-packager-maven-plugin</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>Off-line XWiki Repository Packager Maven Plugin</name>
   <description>Maven plugin to prepare packaged xwiki repositories for off-line installations</description>
@@ -16,7 +16,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/maven-plugin-offline-xwiki-repository-packager.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/maven-plugin-offline-xwiki-repository-packager.git</developerConnection>
     <url>https://github.com/xwiki-contrib/maven-plugin-offline-xwiki-repository-packager/tree/master</url>
-    <tag>offline-xwiki-repository-packager-maven-plugin-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
