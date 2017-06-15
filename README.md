@@ -93,7 +93,7 @@ create a new maven project with this simple pom:
           <plugin>
             <groupId>org.xwiki.contrib</groupId>
             <artifactId>offline-xwiki-repository-packager-maven-plugin</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
             <configuration>
               <excludes>
                 <!-- Exclude JARs that have legacy versions in the WAR -->
