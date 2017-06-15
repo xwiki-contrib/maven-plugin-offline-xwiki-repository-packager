@@ -137,6 +137,21 @@ create a new maven project with this simple pom:
           </plugin>
         </plugins>
       </build>
+
+      <!-- Not available on Maven central -->
+      <repositories>
+        <repository>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>xwiki-releases</id>
+          <name>XWiki Repository</name>
+          <url>http://nexus.xwiki.org/nexus/content/groups/public/</url>
+        </repository>
+      </repositories>
     </project>
     
 And an assembly definition into src/assemble/offline-repository.xml with the following content:
