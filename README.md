@@ -141,6 +141,20 @@ create a new Maven project with this simple pom:
       </build>
 
       <!-- Not available on Maven central -->
+      <pluginRepositories>
+        <pluginRepository>
+          <id>xwiki-plugin-releases</id>
+          <name>XWiki Plugins Repository<</name>
+          <url>http://nexus.xwiki.org/nexus/content/groups/public/</url>
+          <layout>default</layout>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </pluginRepository>
+      </pluginRepositories>
       <repositories>
         <repository>
           <releases>
