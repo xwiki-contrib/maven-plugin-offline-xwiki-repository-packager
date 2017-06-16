@@ -171,7 +171,7 @@ And an assembly definition into src/assemble/offline-repository.xml with the fol
     </assembly>
 
 You can build your project with `mvn package`, and you will get your repository packaged in the `target` folder, under
-the `data` folder, and a ready to transfer zip file in `my.artifact.id-version.zip`.
+the `data` folder, and a ready to transfer zip file in `my.artifact.id-version.zip`. Note, in addition to installing Maven, you must create a '~/.m2/settings.xml' file per http://dev.xwiki.org/xwiki/bin/view/Community/Building#HInstallingMaven prior to building the project.
 
 To use that repository, in a fresh installation of XWiki (no database, nor existing extensions installed yet), unzip the
 resulting package in the permanent directory. Be careful to give appropriate rights to allow the servlet container to
