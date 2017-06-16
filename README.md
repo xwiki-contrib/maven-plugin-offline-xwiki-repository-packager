@@ -15,7 +15,7 @@ Maven plugin to prepare packaged xwiki repositories for off-line installations
 
 ## Usage
 
-**Prerequisite**: [Install and setup Maven](http://dev.xwiki.org/xwiki/bin/view/Community/Building#HInstallingMaven (Pay attention to setting up your `~/.m2/settings.xml` file as indicated).
+**Prerequisite**: [Install and setup Maven](http://dev.xwiki.org/xwiki/bin/view/Community/Building#HInstallingMaven) (Pay attention to setting up your `~/.m2/settings.xml` file as indicated).
  
 To use this plugin to prepare an off-line repository for a new installation setup without Internet access, you need to
 create a new Maven project with this simple pom:
