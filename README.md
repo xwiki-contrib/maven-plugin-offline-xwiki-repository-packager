@@ -15,8 +15,10 @@ Maven plugin to prepare packaged xwiki repositories for off-line installations
 
 ## Usage
 
+**Prerequisite**: [Install and setup Maven](http://dev.xwiki.org/xwiki/bin/view/Community/Building#HInstallingMaven (Pay attention to setting up your `~/.m2/settings.xml` file as indicated).
+ 
 To use this plugin to prepare an off-line repository for a new installation setup without Internet access, you need to
-create a new maven project with this simple pom:
+create a new Maven project with this simple pom:
     
     <?xml version="1.0" encoding="UTF-8"?>
     <project xmlns="http://maven.apache.org/POM/4.0.0" 
@@ -171,7 +173,7 @@ And an assembly definition into src/assemble/offline-repository.xml with the fol
     </assembly>
 
 You can build your project with `mvn package`, and you will get your repository packaged in the `target` folder, under
-the `data` folder, and a ready to transfer zip file in `my.artifact.id-version.zip`. Note, in addition to installing Maven, you must create a '~/.m2/settings.xml' file per http://dev.xwiki.org/xwiki/bin/view/Community/Building#HInstallingMaven prior to building the project.
+the `data` folder, and a ready to transfer zip file in `my.artifact.id-version.zip`.
 
 To use that repository, in a fresh installation of XWiki (no database, nor existing extensions installed yet), unzip the
 resulting package in the permanent directory. Be careful to give appropriate rights to allow the servlet container to
