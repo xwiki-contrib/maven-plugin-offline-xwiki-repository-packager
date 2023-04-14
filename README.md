@@ -72,7 +72,6 @@ create a new Maven project with this simple pom:
             <version>1.2.3</version>
             <type>jar_or_xar</type>
         </dependency>
-        ...
         <!-- A special case, get the improved Blog Application between 8.4.2 and 9.2 -->
         <dependency>
           <groupId>org.xwiki.contrib.blog</groupId>
@@ -87,7 +86,6 @@ create a new Maven project with this simple pom:
             </exclusion>
           </exclusions>    
         </dependency>
-        ...
       </dependencies>
       <build>
         <plugins>
@@ -144,7 +142,7 @@ create a new Maven project with this simple pom:
       <pluginRepositories>
         <pluginRepository>
           <id>xwiki-plugin-releases</id>
-          <name>XWiki Plugins Repository<</name>
+          <name>XWiki Plugins Repository</name>
           <url>http://nexus.xwiki.org/nexus/content/groups/public/</url>
           <layout>default</layout>
           <snapshots>
